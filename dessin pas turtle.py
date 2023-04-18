@@ -16,9 +16,9 @@ def demande():
     path = ["image\images.jpg", "image/téléchargement.jpg"]
     #de la logique pour les sapin
     if nbSapin == "oui":
-        image_path = path[1]
+        image_path = path[0]
     else:
-        image_path = path[0]    
+        image_path = path[1]    
 
 demande()
 image = pygame.image.load(image_path)
