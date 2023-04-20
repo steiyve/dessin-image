@@ -2,46 +2,62 @@
 #creer le 2023-04-18
 #dessine une foret
 
-import pygame
-import sys
+import turtle as t
+import random as r
 
-#initialization des chose utile
-pygame.init()
-image_path = ""
+nb_sapin = 1
 
-#les fonctions
-def demande():
-    global image_path
-    nbSapin = input("veux tu voir une ville:")
-    path = ["image\images.jpg", "image/téléchargement.jpg"]
-    #de la logique pour les sapin
-    if nbSapin == "oui":
-        image_path = path[0]
-    else:
-        image_path = path[1]    
+def sapin(nbSapin):
+    for i in range(nbSapin):
+        t.penup()
+        x=r.randint(-200, 200)
+        y=r.randint(-200, 200)
+        t.goto(x,y)
+        t.pendown()
+        t.fd(40)
+        t.left(90)
+        posXY = t.pos()
+        print(posXY)
+        t.fd(100)
+        t.left(90)
+        t.fd(40)
+        t.left(90)
+        t.fd(100)
+        t.left(90)
+        t.penup()
+        x-=40
+        y+=100
+        t.goto(x,y)
+        t.pendown()
+        for x in range(3):
+            t.fd(120)
+            t.left(120)
+        t.penup()
+        t.goto(x,y)
+        y+=93.23
+        t.goto(x,y)
+        t.pendown()
+        for x in range(3):
+            t.fd(120)
+            
+            t.left(120)
+        t.penup()
+        y+=100
+        t.goto(x,y)
+        t.pendown()
+        for x in range(3):
+            t.fd(120)
+            
+            t.left(120)
+        t.penup()
+        y+=100
+        t.goto(x, y)
+        t.pendown()
 
-demande()
-image = pygame.image.load(image_path)
-#creer le fenetre et cest atribut
-screen_width, screen_height = image.get_size()
-screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption("les image")
 
-#dessiner limage
-screen.blit(image, (0, 0))
-pygame.display.flip()
 
-#des variable
-running = True
-#une boucle
-while running:
-    #une autre boucle
-    for event in pygame.event.get():
-        #de la logique
-        if event.type == pygame.QUIT:
-            running = False
+sapin(nb_sapin)
 
-#on quite
-print("les source pour les image sont dans source.txt")
-pygame.quit()
-sys.exit()
+while True:
+    pass
+        
