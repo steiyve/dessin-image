@@ -95,16 +95,44 @@ def lac():
     t.begin_fill()
     t.circle(100)
     t.end_fill()
+    t.penup()
+    t.goto(70,-500)
+    t.color("blue")
+    t.begin_fill()
+    t.circle(100)
+    t.end_fill()
+    t.penup()
+    t.goto(-70,-500)
+    t.color("blue")
+    t.begin_fill()
+    t.circle(100)
+    t.end_fill()
 
+
+def stat():
+    x=r.randint(-800, 800)
+    y=r.randint(50, 500)
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    t.color("yellow")
+    t.begin_fill()
+    t.circle(10)
+    t.end_fill()
 
 bg()
+
+for i in range(100):
+    stat()
 nuage()
 lac()
 AllX=[]
 AllY=[]
+
+
 for i in range(nb_sapin):
     t.up()
-    x=r.randint(-500,500)
+    x=r.randint(-800,800)
     y=r.randint(-300,0)
     AllX.append(x)
     AllY.append(y)
