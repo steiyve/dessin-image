@@ -1,4 +1,4 @@
 # dessin-image
 
-mettez la fenetre en plein ecran
-mettez beaucoup darbre.
+### mettez la fenetre en plein ecran
+### mettez beaucoup darbre.
