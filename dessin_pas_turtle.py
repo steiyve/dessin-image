@@ -63,12 +63,48 @@ def bg():
     t.goto(0,0)
     t.end_fill()
 
+
+def nuage():
+    t.penup()
+    t.goto(0, 350)
+    t.pendown()
+    t.color("white")
+    t.begin_fill()
+    t.circle(35)
+    t.end_fill()
+    t.penup()
+    t.goto(0, 350)
+    t.goto(25,350)
+    t.pendown()
+    t.begin_fill()
+    t.circle(25)
+    t.end_fill()
+    t.penup()
+    t.goto(0, 350)
+    t.goto(-25, 350)
+    t.pendown()
+    t.begin_fill()
+    t.circle(25)
+    t.end_fill()
+    
+
+def lac():
+    t.penup()
+    t.goto(-0,-500)
+    t.color("blue")
+    t.begin_fill()
+    t.circle(100)
+    t.end_fill()
+
+
 bg()
+nuage()
+lac()
 AllX=[]
 AllY=[]
 for i in range(nb_sapin):
     t.up()
-    x=r.randint(-300,300)
+    x=r.randint(-500,500)
     y=r.randint(-300,0)
     AllX.append(x)
     AllY.append(y)
