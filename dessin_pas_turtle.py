@@ -6,7 +6,10 @@ import turtle as t
 import random as r
 
 
+t.screensize(300,300)
+
 def sapin():
+    t.colormode(255)
     couleur = "brown"
     t.color(couleur)
     t.begin_fill()
@@ -22,8 +25,7 @@ def sapin():
     t.down()
     t.left(-120)
     for j in range(3):
-        couleur = "green"
-        t.color(couleur)
+        t.color(120, 194, 64)
         t.begin_fill()
         for x in range(3):
             t.fd(30)
@@ -47,12 +49,27 @@ while True:
         print("entrer un chiffre")
 
 
+
+def bg():
+    t.speed(0)
+    t.bgcolor("blue")
+    t.pencolor("green")
+    t.color("green")
+    t.begin_fill()
+    t.goto(-1000, 0)
+    t.goto(-1000,-1000)
+    t.goto(1000, -1000)
+    t.goto(1000, 0)
+    t.goto(0,0)
+    t.end_fill()
+
+bg()
 AllX=[]
 AllY=[]
 for i in range(nb_sapin):
     t.up()
     x=r.randint(-300,300)
-    y=r.randint(-300,300)
+    y=r.randint(-300,0)
     AllX.append(x)
     AllY.append(y)
     t.goto(x,y)
